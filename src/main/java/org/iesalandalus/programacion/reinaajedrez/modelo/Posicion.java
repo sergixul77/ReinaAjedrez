@@ -6,20 +6,13 @@ public class Posicion {
 	
 	private char columna;
 
-	
 	private static final int MIN_fila = 1;
 	
 	private static final int MAX_fila = 8;
 	
 	private static final char MIN_columna = 'a';
-
 	
 	private static final char  MAX_columna = 'h';
-	
-	
-	
-	
-	
 	
 	
 	
@@ -30,6 +23,18 @@ public class Posicion {
 		setColumna(columna);
 		
 	}
+	
+	
+	// Constructor copia
+	
+	public Posicion (Posicion posicion) {
+		
+		fila = posicion.getFila();
+		columna = posicion.getColumna();
+	}
+	
+	
+	// Fin del constructor copia
 
 	public int getFila() {
 		return fila;
