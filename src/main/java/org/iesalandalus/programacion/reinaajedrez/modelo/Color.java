@@ -3,7 +3,7 @@ package org.iesalandalus.programacion.reinaajedrez.modelo;
 public enum Color {
 	
 	
-	BLANCO ("Blanco"),NEGRO ("Negro") ;
+	BLANCO ("Blanco"),NEGRO ("Negro");
 
 		private String cadenaAMostrar;
 
@@ -12,6 +12,9 @@ public enum Color {
 		}
 	
 	
-
+		@Override // preguntar mañana
+		public String toString() {
+			return String.format("Color=Blanco, Color=Negro", Blanco, Negro);
+		}
 	
 }
