@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.reinaajedrez.modulo;
+package org.iesalandalus.programacion.reinaajedrez.modelo;
 
 public enum Direccion {
 	
