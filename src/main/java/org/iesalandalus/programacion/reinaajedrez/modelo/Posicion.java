@@ -90,7 +90,10 @@ public class Posicion {
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		return String.format("columna=%s, fila=%s" , columna, fila);
+	}
 	
 	
 	
