@@ -14,7 +14,7 @@ public enum Color {
 	
 		@Override // preguntar mañana
 		public String toString() {
-			return String.format("Color=Blanco, Color=Negro", Blanco, Negro);
+			return String.format("Color=,", Blanco, Negro);
 		}
 	
 }
