@@ -22,6 +22,15 @@ public class Posicion {
 	
 	
 	
+	
+	
+	
+	public Posicion(int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
+		
+	}
+
 	public int getFila() {
 		return fila;
 	}
@@ -50,6 +59,8 @@ public class Posicion {
 		} else if ( columna > MAX_columna) {
 			throw new IllegalArgumentException("La pieza se sale del tablero , pon un valor mas pequeño IDIOTA");
 		}
+		
+		this.columna = columna;
 	}
 	
 	
