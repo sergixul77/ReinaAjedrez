@@ -10,7 +10,7 @@ public enum Color {
 		this.cadenaAMostrar = cadenaAMostrar;
 	}
 
-	@Override // preguntar mañana
+	@Override 
 	public String toString() {
 		return cadenaAMostrar;
 	}
