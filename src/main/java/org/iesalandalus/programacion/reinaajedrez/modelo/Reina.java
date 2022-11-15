@@ -5,6 +5,21 @@ public class Reina {
 	private Color color;
 
 	private Posicion posicion;
+	
+	
+	
+	
+	
+	public Reina () {
+		
+		color = new Color ("blaco");
+	}
+	
+	
+	
+	
+	
+	
 
 	public Color getColor() {
 		return color;
@@ -27,9 +42,10 @@ public class Reina {
 		if (posicion == null) {
 
 			throw new IllegalArgumentException("La posicion que has introducido es nula");
-
 		}
 		this.posicion = posicion;
 	}
+	
+	
 
 }
