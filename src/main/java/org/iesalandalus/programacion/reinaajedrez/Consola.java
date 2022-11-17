@@ -2,7 +2,6 @@ package org.iesalandalus.programacion.reinaajedrez;
 
 import org.iesalandalus.programacion.reinaajedrez.modelo.Color;
 import org.iesalandalus.programacion.reinaajedrez.modelo.Direccion;
-import org.iesalandalus.programacion.reinaajedrez.modelo.Reina;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -50,7 +49,7 @@ public class Consola {
 
 	}
 
-	public static Color elegirOpcion() {
+	public static Color elegirColor() {
 
 		Color color = null;
 
