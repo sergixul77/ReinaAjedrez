@@ -23,7 +23,7 @@ public class Consola {
 
 		int opcionMenu;
 
-		System.out.println("Elige una de las opciones del menu");
+		
 
 		do {
 			System.out.println("Introduce una opción valida por teclado");
@@ -33,16 +33,15 @@ public class Consola {
 
 		switch (opcionMenu) {
 		case 1:
-			System.out.println("Has creado la reina por defecto");
 			break;
 		case 2:
-			System.out.println("Has elegido crear una reina eligiendo su color");
+			
 			break;
 		case 3:
-			System.out.println("Has elegido la opcion de moverte");
+						
 			break;
 		case 4:
-			System.out.println("Has elegido la opcion de salir");
+						
 			break;
 		}
 		return opcionMenu; // te devuelve el valor que ha introducido el usuario
@@ -66,14 +65,12 @@ public class Consola {
 
 		switch (opcionColor) {
 		case 1:
-			System.out.println("Has elegido el color Blanco");
-
+			
 			color = Color.BLANCO;
 
 			break;
 		case 2:
-			System.out.println("Has elegido el color Negro");
-
+			
 			color = Color.NEGRO;
 
 			break;
@@ -169,7 +166,7 @@ public class Consola {
 
 	public static void despedirse() {
 
-		System.out.println("Hasta luego majo!!!!");
+		System.out.println("Hasta luego lucas!!!!");
 	}
 
 }
