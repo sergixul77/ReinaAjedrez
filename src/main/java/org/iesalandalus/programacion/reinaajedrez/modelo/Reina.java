@@ -3,11 +3,10 @@ package org.iesalandalus.programacion.reinaajedrez.modelo;
 import javax.naming.OperationNotSupportedException;
 
 public class Reina {
-	
+
 	private Posicion posicion;
 
 	private Color color;
-
 
 	public Reina() {
 
@@ -48,6 +47,7 @@ public class Reina {
 		}
 		this.posicion = posicion;
 	}
+
 	public void mover(Direccion direccion, int pasos) throws OperationNotSupportedException {
 
 		if (direccion == null) {
@@ -67,56 +67,50 @@ public class Reina {
 
 				setPosicion(new Posicion(posicion.getFila() + pasos, posicion.getColumna()));
 				break;
-				
+
 			case NORESTE:
-				
-				setPosicion (new Posicion(posicion.getFila() + pasos , (char) (posicion.getColumna() + pasos)));
-				
+
+				setPosicion(new Posicion(posicion.getFila() + pasos, (char) (posicion.getColumna() + pasos)));
+
 				break;
-				
-				
+
 			case ESTE:
-				
-				setPosicion (new Posicion (posicion.getFila() , (char) (posicion.getColumna() + pasos )));
-				
+
+				setPosicion(new Posicion(posicion.getFila(), (char) (posicion.getColumna() + pasos)));
+
 				break;
-				
+
 			case SURESTE: // resta a la fila y sumar columna
-				
-				setPosicion (new Posicion (posicion.getFila() -pasos , (char) (posicion.getColumna() + pasos )));
-				
+
+				setPosicion(new Posicion(posicion.getFila() - pasos, (char) (posicion.getColumna() + pasos)));
+
 				break;
-				
+
 			case SUR:
-				
-				setPosicion (new Posicion (posicion.getFila() -pasos , (char) (posicion.getColumna())));
-				
+
+				setPosicion(new Posicion(posicion.getFila() - pasos, (char) (posicion.getColumna())));
+
 				break;
-				
+
 			case SUROESTE: // resto fila y resto columna
-				
-				setPosicion (new Posicion (posicion.getFila() -pasos , (char) (posicion.getColumna() -pasos )));
-				
+
+				setPosicion(new Posicion(posicion.getFila() - pasos, (char) (posicion.getColumna() - pasos)));
+
 				break;
-				
-				
+
 			case OESTE: //
-				
-				setPosicion (new Posicion (posicion.getFila()  , (char) (posicion.getColumna() -pasos )));
-				
+
+				setPosicion(new Posicion(posicion.getFila(), (char) (posicion.getColumna() - pasos)));
+
 				break;
-				
-				
+
 			case NOROESTE:
-				
-				setPosicion (new Posicion (posicion.getFila() +pasos, (char) (posicion.getColumna() -pasos )));
-				
+
+				setPosicion(new Posicion(posicion.getFila() + pasos, (char) (posicion.getColumna() - pasos)));
+
 				break;
-				
+
 			}
-			
-			
-				
 
 		} catch (IllegalArgumentException e) {
 			throw new OperationNotSupportedException("ERROR: Movimiento no válido (se sale del tablero).");
@@ -126,6 +120,7 @@ public class Reina {
 
 	@Override
 	public String toString() {
-		return "color=" + color + ", posicion=(" + posicion + ")";			}
+		return "color=" + color + ", posicion=(" + posicion + ")";
+	}
 
 }
