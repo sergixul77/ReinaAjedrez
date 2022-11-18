@@ -23,27 +23,12 @@ public class Consola {
 
 		int opcionMenu;
 
-		
-
 		do {
-			System.out.println("Introduce una opción valida por teclado");
+			System.out.print("Introduce una opción valida por teclado : (1-4)");
 
 			opcionMenu = Entrada.entero();
 		} while (opcionMenu < 1 || opcionMenu > 4);
 
-		switch (opcionMenu) {
-		case 1:
-			break;
-		case 2:
-			
-			break;
-		case 3:
-						
-			break;
-		case 4:
-						
-			break;
-		}
 		return opcionMenu; // te devuelve el valor que ha introducido el usuario
 
 	}
@@ -58,7 +43,7 @@ public class Consola {
 
 			System.out.println("Pulsa 1 para crear la reina Blanca ");
 			System.out.println("Pulsa 2 para crear la reina Negra ");
-
+			System.out.print("Introduce una de las opcionews :");
 			opcionColor = Entrada.entero();
 
 		} while (opcionColor < 1 || opcionColor > 2);
@@ -100,7 +85,7 @@ public class Consola {
 
 		do {
 
-			System.out.println("Introduce el número hacia donde te quieras mover");
+			System.out.print("Introduce el número hacia donde te quieras mover");
 
 			opcionDireccion = Entrada.entero();
 

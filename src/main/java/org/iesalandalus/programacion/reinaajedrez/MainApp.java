@@ -1,69 +1,90 @@
 package org.iesalandalus.programacion.reinaajedrez;
 
+import javax.naming.OperationNotSupportedException;
+
 import org.iesalandalus.programacion.reinaajedrez.modelo.Color;
 import org.iesalandalus.programacion.reinaajedrez.modelo.Posicion;
 import org.iesalandalus.programacion.reinaajedrez.modelo.Reina;
 
 public class MainApp {
 
-	private static final Color Color = null;
+	private static Reina reina;
 
-	private Reina reina;
+	public static void main(String[] args) throws OperationNotSupportedException {
 
-	public static void main(String[] args) {
+		int auxiliar;
 
-		Consola.mostrarMenu();
-		MainApp.ejecutarOpcion(0);
+		do {
+
+			Consola.mostrarMenu();
+			auxiliar = Consola.elegirOpcionMenu();
+			MainApp.ejecutarOpcion(auxiliar);
+		} while (auxiliar != 4);
 
 	}
 
-	private static void ejecutarOpcion(int opcion) {
-		
-		switch (Consola.elegirOpcionMenu()) {
-		  case 1:
-		    MainApp.crearReinaDefecto();
-		  
-		    break;
-		  case 2:
-		    MainApp.crearReinaColor();
-		    break;
-		  case 3:
-			  
-			 
-			  
-			  
-			  break;
-			  
-		  case 4:
-			 Consola.despedirse();
-			  break;
-		    }
+	private static void ejecutarOpcion(int opcion) throws OperationNotSupportedException {
+
+		switch (opcion) {
+		case 1:
+			crearReinaDefecto();
+			mostrarReina();
+			break;
+		case 2:
+			crearReinaColor();
+			mostrarReina();
+
+			break;
+		case 3:
+
+			mover();
+			mostrarReina();
+
+			break;
+
+		case 4:
+			Consola.despedirse();
+			break;
+		}
 
 	}
 
 	private static void crearReinaDefecto() {
 
-		Reina reina = new Reina();
-
-		System.out.println(reina.toString());
+		reina = new Reina();
 
 	}
 
 	private static void crearReinaColor() {
-		
-		Reina reina = new Reina (Consola.elegirColor());
-		
-		System.out.println(reina);
-		
+
+		reina = new Reina(Consola.elegirColor());
+
 	}
 
-	private static void mover() {
+	private static void mover() throws OperationNotSupportedException {
+		if (reina == null) {
+			System.out.println("No has creado una reina, tienes que crearla");
+		} else {
+
+			try {
+
+				Consola.mostrarMenuDirecciones();
+
+				reina.mover(Consola.elegirDireccion(), Consola.elegirPasos());
+
+			} catch (IllegalArgumentException | OperationNotSupportedException | NullPointerException e) {
+				System.out.println(e.getMessage());
+			}
+		}
 
 	}
 
 	private static void mostrarReina() {
-				
-		
+
+		if (reina != null) {
+
+			System.out.println(reina.toString());
+		} 
 
 	}
 
